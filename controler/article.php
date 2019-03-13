@@ -1,5 +1,5 @@
 <?php
-$pageTitle="Listearticles";
+$pageTitle="Liste articles";
 // HTML 
 include('model/article.php');         
 // include('view/head_table.php');          
@@ -8,11 +8,15 @@ include('model/article.php');
 // include('view/article.php');
 // include('view/footer.php');        
 // include('view/footer_table.php');  
-echo $twig->render('table.html', 
+echo $twig->render('table.html',
+
 array('title' => 'Liste des utilisateurs', 
 'assets' => 'assets/',
 'name' => $_SESSION['surname']." ".$_SESSION['name'],
 'projectName' => "LaPiscine",
 'projectNameShort' => "L-P",
+'titre_table'=>"des articles",
 'list' => $row )
 );
+
+var_dump($row);

@@ -39,7 +39,6 @@ if(!empty($_POST)){
             $req->bindParam(':idstatus', $idstatus);
             $req->execute();
             $result=$req;
-            $msg="Utilisateur bien ajouté!";
         }
     }
     else {
